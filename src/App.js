@@ -114,9 +114,10 @@ export default function App() {
                 listStyle: "name",
                 padding: "1rem",
                 border: "1px solid #D1D5DB",
-                width: "70%",
+                width: "100%",
                 margin: "1rem 0rem",
-                borderRadius: "0.5rem"
+                borderRadius: "0.5rem",
+                backgroundColor: "#F3F4F6"
               }}
             >
               {" "}
