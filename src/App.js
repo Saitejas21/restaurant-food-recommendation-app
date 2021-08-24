@@ -5,12 +5,12 @@ import { useState } from "react";
 const hotelDb = {
   North_Indian: [
     { name: "Chole Bhature", rating: "4/5" },
-    { name: "Rogan Josh", rating: "3.5/5" },
-    { name: "Stuffed Bati", rating: "3/5" },
-    { name: "Malai ka Kheer", rating: "3.5/5" },
+    { name: "Rogan Josh", rating: "3.5/5 " },
+    { name: "Stuffed Bati", rating: "3/5 " },
+    { name: "Malai ka Kheer", rating: "3.5/5 " },
     { name: "Chicken Dum Biriyani", rating: "4/5" },
     { name: "Aloo Samosa", rating: "5/5" },
-    { name: "Nihari Gosht", rating: "3/5" },
+    { name: "Nihari Gosht", rating: "3/5 " },
     { name: "Butter Chicken", rating: "4/5" },
     { name: "Dahi Bhalla", rating: "4.5/5" },
     { name: "Almond Malai Kulfi", rating: "4/5" }
@@ -70,7 +70,7 @@ const hotelDb = {
 };
 
 export default function App() {
-  const [selectedTopic, setTopic] = useState("Chats");
+  const [selectedTopic, setTopic] = useState("North_Indian");
   function topicClickHandler(topic) {
     setTopic(topic);
   }
@@ -90,12 +90,13 @@ export default function App() {
             onClick={() => topicClickHandler(topic)}
             style={{
               cursor: "pointer",
-              background: "#E5E7EB",
-              borderRadius: "0.5rem",
+              borderRadius: "none",
+              background: "none",
               padding: "0.5rem 1rem",
-              border: "1px solid black",
+              border: "none",
               margin: "1rem 0.3rem",
-              fontFamily: "poppins"
+              fontFamily: "poppins",
+              fontSize: "1.5rem"
             }}
           >
             {topic}
@@ -119,12 +120,17 @@ export default function App() {
               }}
             >
               {" "}
-              <div style={{ fontSize: "larger" }}>{food.name}</div>
-              <div style={{ fontSize: "smaller" }}>{food.rating}</div>
+              <div style={{ fontSize: "x-large" }}>{food.name}</div>
+              <div style={{ fontSize: "medium", paddingTop: "0.7rem" }}>
+                Ratings : {food.rating}
+              </div>
             </li>
           ))}
         </ul>
       </div>
+      <footer>
+        <p>Sai Tejas A R | Projects</p>
+      </footer>
     </div>
   );
 }
